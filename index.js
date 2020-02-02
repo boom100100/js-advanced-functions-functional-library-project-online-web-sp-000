@@ -5,15 +5,8 @@ const fi = (function() {
     },
 
     each: function(collection, callback) {
-      
-      /*const newCollection = (collection instanceof Array) ? collection.slice() : Object.values(collection)
-
-      for (let idx = 0; idx < newCollection.length; idx++)
-        iteratee(newCollection[idx])
-
-      return collection*/
-      
-      let copy = (collection instanceof Array) ? collection.slice() : Object.values(collection);
+      //const better than let
+      const copy = (collection instanceof Array) ? collection.slice() : Object.values(collection);
       for (let i = 0; i < copy.length; i++){
         callback(copy[i]);
       }
