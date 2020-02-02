@@ -56,8 +56,17 @@ const fi = (function() {
     },
     
     filter: function(collection, predicate){
-      
+      if (!(collection instanceof Array))
+        collection = Object.values(collection)
+
+      const newArr = []
+
+      for (let idx = 0; idx < collection.length; idx++)
+        if (predicate(collection[idx])) newArr.push(collection[idx])
+
+      return newArr
     },
+    
     size: function(){},
     first: function(){},
     last: function(){},
