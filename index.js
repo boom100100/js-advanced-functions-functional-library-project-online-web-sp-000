@@ -161,7 +161,7 @@ const fi = (function() {
 
     functions: function(object) {
       let result = [];
-      for (let key of object)
+      for (let key in object)
         result.push(key)
       
       return result;
