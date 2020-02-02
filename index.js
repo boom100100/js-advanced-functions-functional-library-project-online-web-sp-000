@@ -7,7 +7,7 @@ const fi = (function() {
     each: function(collection, callback) {
       let copy = collection;
       for (let i = 0; i < copy.length; i++){
-        callback(copy);
+        callback(copy[i]);
       }
       return collection;
     },
