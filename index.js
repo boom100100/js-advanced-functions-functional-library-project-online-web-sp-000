@@ -162,13 +162,13 @@ const fi = (function() {
     functions: function(object) {
       
       
-      const functionNames = []
+      /*const functionNames = []
 
       for (let key in obj) {
         if (typeof obj[key] === "function"){
           functionNames.push(key)
         }
-      }
+      }*/
 
       return functionNames.sort()
     
