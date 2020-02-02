@@ -26,7 +26,16 @@ const fi = (function() {
       return copy;
     },
 
-    reduce: function() {
+    reduce: function(collection, callback) {
+      let result = [];
+      
+      if (!(collection instanceof Array))
+        collection = Object.values(collection)
+      
+      for (let i = 0; i < collection.length; i++){
+        copy.push(callback(collection[i]));
+      }
+      return copy;
 
     },
 
