@@ -6,18 +6,18 @@ const fi = (function() {
 
     each: function(collection, callback) {
       
-      /*const newCollection = (collection instanceof Array) ? collection.slice() : Object.values(collection)
+      const newCollection = (collection instanceof Array) ? collection.slice() : Object.values(collection)
 
       for (let idx = 0; idx < newCollection.length; idx++)
         iteratee(newCollection[idx])
 
-      return collection*/
+      return collection
       
-      //let copy = collection;
+      /*//let copy = collection;
       for (let i = 0; i < collection.length; i++){
         callback(collection[i]);
       }
-      return collection;
+      return collection;*/
     },
 
     map: function() {
