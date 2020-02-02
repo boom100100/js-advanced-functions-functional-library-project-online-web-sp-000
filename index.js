@@ -13,7 +13,7 @@ const fi = (function() {
 
       return collection*/
       
-      const copy = (collection instanceof Array) ? collection.slice() : Object.values(collection);
+      let copy = (collection instanceof Array) ? collection.slice() : Object.values(collection);
       for (let i = 0; i < copy.length; i++){
         callback(copy[i]);
       }
