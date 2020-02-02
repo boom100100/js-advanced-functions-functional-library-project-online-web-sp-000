@@ -31,11 +31,11 @@ const fi = (function() {
       
       
       if (!(collection instanceof Array))
-        collection = Object.values(collection)
+        collection = Object.values(collection);
         
         if (!result) {
-				result = collection[0]
-				collection = collection.slice(1)
+				result = collection[0];
+				collection = collection.slice(1);
 			}
 			
 			for (let i = 0; i < collection.length; i++){
@@ -47,27 +47,30 @@ const fi = (function() {
     
     find: function(collection, predicate){
       if (!(collection instanceof Array))
-        collection = Object.values(collection)
+        collection = Object.values(collection);
 
       for (let idx = 0; idx < collection.length; idx++)
-        if (predicate(collection[idx])) return collection[idx]
+        if (predicate(collection[idx])) return collection[idx];
 
-      return undefined
+      return undefined;
     },
     
     filter: function(collection, predicate){
       if (!(collection instanceof Array))
-        collection = Object.values(collection)
+        collection = Object.values(collection);
 
-      const newArr = []
+      const newArr = [];
 
       for (let idx = 0; idx < collection.length; idx++)
-        if (predicate(collection[idx])) newArr.push(collection[idx])
+        if (predicate(collection[idx])) newArr.push(collection[idx]);
 
-      return newArr
+      return newArr;
     },
     
-    size: function(){},
+    size: function(){
+      return (collection instanceof Array) ? collection.length : Object.keys(collection).length;
+    },
+    
     first: function(){},
     last: function(){},
     compact: function(){},
