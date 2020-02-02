@@ -14,7 +14,7 @@ const fi = (function() {
     },
 
     map: function(collection, callback) {
-      const copy;
+      let copy;
       if (typeof collection === Array)
         copy = [];
       
