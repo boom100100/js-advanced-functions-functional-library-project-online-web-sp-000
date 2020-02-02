@@ -160,6 +160,7 @@ const fi = (function() {
     },
 
     functions: function(object) {
+      console.log(object);
       return this.keys(object);
     },
 
