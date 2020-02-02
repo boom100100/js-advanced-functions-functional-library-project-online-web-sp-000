@@ -14,8 +14,8 @@ const fi = (function() {
       return collection*/
       
       const copy = (collection instanceof Array) ? collection.slice() : Object.values(collection);
-      for (let i = 0; i < collection.length; i++){
-        callback(collection[i]);
+      for (let i = 0; i < copy.length; i++){
+        callback(copy[i]);
       }
       return collection;
     },
