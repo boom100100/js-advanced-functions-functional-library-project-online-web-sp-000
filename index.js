@@ -26,6 +26,7 @@ const fi = (function() {
       return copy;
     },
 
+    //refactor test and function parameters so default parameters are last
     reduce: function(collection = [], callback = () => {}, result) {
       
       
