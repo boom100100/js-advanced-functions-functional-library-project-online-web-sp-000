@@ -159,8 +159,8 @@ const fi = (function() {
 
     },
 
-    functions: function() {
-
+    functions: function(object) {
+      this.keys(object)
     },
 
 
