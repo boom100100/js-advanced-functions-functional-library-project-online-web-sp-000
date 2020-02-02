@@ -71,7 +71,10 @@ const fi = (function() {
       return (collection instanceof Array) ? collection.length : Object.keys(collection).length;
     },
     
-    first: function(){},
+    first: function(collection, stop=false) {
+      return (stop) ? collection.slice(0, stop) : collection[0];
+    },
+    
     last: function(){},
     compact: function(){},
     sortBy: function(){},
