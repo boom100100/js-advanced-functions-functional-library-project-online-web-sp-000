@@ -55,7 +55,7 @@ const fi = (function() {
       return undefined
     },
     
-    filter: function(){
+    filter: function(collection, predicate){
       
     },
     size: function(){},
