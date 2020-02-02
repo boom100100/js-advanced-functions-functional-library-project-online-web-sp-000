@@ -14,7 +14,7 @@ const fi = (function() {
     },
 
     map: function(collection, callback) {
-      const copy = (collection instanceof Array) ? collection.slice() : Object.values(collection);
+      const copy = [];
       for (let i = 0; i < copy.length; i++){
         callback(copy[i]);
       }
