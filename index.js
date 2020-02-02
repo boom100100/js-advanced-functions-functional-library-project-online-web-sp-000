@@ -168,9 +168,9 @@ const fi = (function() {
         if (typeof obj[key] === "function"){
           functionNames.push(key)
         }
-      }*/
+      }
 
-      return functionNames.sort()
+      return functionNames.sort()*/
     
       let result = [];
       for (let key in object){
