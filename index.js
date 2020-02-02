@@ -8,6 +8,7 @@ const fi = (function() {
       for (let i = 0; i < collection.length; i++){
         callback(collection);
       }
+      return collection;
     },
 
     map: function() {
