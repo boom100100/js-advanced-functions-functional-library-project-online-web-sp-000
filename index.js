@@ -26,8 +26,8 @@ const fi = (function() {
       return copy;
     },
 
-    reduce: function(collection, callback) {
-      let result;
+    reduce: function(collection = [], callback = () => {}, acc) {
+      
       
       if (!(collection instanceof Array))
         collection = Object.values(collection)
