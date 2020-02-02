@@ -14,9 +14,11 @@ const fi = (function() {
     },
 
     map: function(collection, callback) {
+      
       let copy = [];
-      //if (typeof collection === Array)
-        //copy = [];
+      
+      if (!(collection instanceof Array))
+        collection = Object.values(collection)
       
       for (let i = 0; i < collection.length; i++){
         copy.push(callback(collection[i]));
