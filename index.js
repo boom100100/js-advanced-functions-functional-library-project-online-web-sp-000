@@ -176,7 +176,6 @@ const fi = (function() {
       for (let key in object){
         if (object[key] === "function")
           result.push(key);
-        
       }
       
       return result;
