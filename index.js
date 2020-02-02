@@ -15,7 +15,7 @@ const fi = (function() {
       
       //let copy = collection;
       for (let i = 0; i < collection.length; i++){
-        iteratee(collection[i]);
+        callback(collection[i]);
       }
       return collection;
     },
