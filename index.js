@@ -45,10 +45,7 @@ const fi = (function() {
 
     },
     
-    find: function(collection, callback){
-      
-    },
-    filter: function(collection, predicate){
+    find: function(collection, predicate){
       if (!(collection instanceof Array))
         collection = Object.values(collection)
 
@@ -56,6 +53,10 @@ const fi = (function() {
         if (predicate(collection[idx])) return collection[idx]
 
       return undefined
+    },
+    
+    filter: function(){
+      
     },
     size: function(){},
     first: function(){},
