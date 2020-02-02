@@ -14,11 +14,11 @@ const fi = (function() {
     },
 
     map: function(collection, callback) {
-      const copy = [];
+      const copy = (collection instanceof Array) ? collection.slice() : Object.values(collection);
       for (let i = 0; i < copy.length; i++){
         callback(copy[i]);
       }
-      return collection;
+      return copy;
     },
 
     reduce: function() {
