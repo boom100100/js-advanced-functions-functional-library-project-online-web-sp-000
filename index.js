@@ -42,10 +42,10 @@ const fi = (function() {
 			}
 			return acc;
       
-      for (let i = 0; i < collection.length; i++){
+      /*for (let i = 0; i < collection.length; i++){
         result = result + callback(collection[i], result);
       }
-      return result;
+      return result;*/
 
     },
 
