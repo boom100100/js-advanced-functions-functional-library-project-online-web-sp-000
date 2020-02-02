@@ -160,9 +160,24 @@ const fi = (function() {
     },
 
     functions: function(object) {
+      
+      
+      const functionNames = []
+
+      for (let key in obj) {
+        if (typeof obj[key] === "function"){
+          functionNames.push(key)
+        }
+      }
+
+      return functionNames.sort()
+    
       let result = [];
-      for (let key in object)
-        result.push(object[key]);
+      for (let key in object){
+        if (object[key] === "function")
+          result.push(key);
+        
+      }
       
       return result;
     },
