@@ -33,7 +33,7 @@ const fi = (function() {
         collection = Object.values(collection)
       
       for (let i = 0; i < collection.length; i++){
-        result = callback(collection[i], result);
+        result = result + callback(collection[i], result);
       }
       return result;
 
