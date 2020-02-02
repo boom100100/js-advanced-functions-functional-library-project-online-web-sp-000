@@ -26,7 +26,7 @@ const fi = (function() {
       return copy;
     },
 
-    reduce: function(result, collection = [], callback = () => {}) {
+    reduce: function(collection = [], callback = () => {}, result) {
       
       
       if (!(collection instanceof Array))
