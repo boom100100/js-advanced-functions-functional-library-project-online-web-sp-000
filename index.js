@@ -36,6 +36,11 @@ const fi = (function() {
 				acc = collection[0]
 				collection = collection.slice(1)
 			}
+			
+			for (let i = 0; i < len; i++) {
+				acc = callback(acc, collection[i], collection)
+			}
+			return acc;
       
       for (let i = 0; i < collection.length; i++){
         result = result + callback(collection[i], result);
