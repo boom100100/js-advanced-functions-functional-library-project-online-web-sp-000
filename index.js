@@ -48,7 +48,15 @@ const fi = (function() {
     find: function(collection, callback){
       
     },
-    filter: function(){},
+    filter: function(){
+      if (!(collection instanceof Array))
+        collection = Object.values(collection)
+
+      for (let idx = 0; idx < collection.length; idx++)
+        if (predicate(collection[idx])) return collection[idx]
+
+      return undefined
+    },
     size: function(){},
     first: function(){},
     last: function(){},
