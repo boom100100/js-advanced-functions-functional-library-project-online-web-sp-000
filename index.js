@@ -31,6 +31,11 @@ const fi = (function() {
       
       if (!(collection instanceof Array))
         collection = Object.values(collection)
+        
+        if (!acc) {
+				acc = collection[0]
+				collection = collection.slice(1)
+			}
       
       for (let i = 0; i < collection.length; i++){
         result = result + callback(collection[i], result);
