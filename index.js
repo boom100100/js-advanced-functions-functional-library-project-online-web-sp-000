@@ -37,7 +37,7 @@ const fi = (function() {
 				collection = collection.slice(1)
 			}
 			
-			for (let i = 0; i < len; i++) {
+			for (let i = 0; i < collection.length; i++) {
 				acc = callback(acc, collection[i], collection)
 			}
 			return acc;
