@@ -27,7 +27,7 @@ const fi = (function() {
     },
 
     reduce: function(collection, callback) {
-      let result = [];
+      let result;
       
       if (!(collection instanceof Array))
         collection = Object.values(collection)
