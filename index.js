@@ -33,9 +33,9 @@ const fi = (function() {
         collection = Object.values(collection)
       
       for (let i = 0; i < collection.length; i++){
-        copy.push(callback(collection[i]));
+        result = callback(collection[i], result);
       }
-      return copy;
+      return result;
 
     },
 
