@@ -26,26 +26,21 @@ const fi = (function() {
       return copy;
     },
 
-    reduce: function(collection = [], callback = () => {}, acc) {
+    reduce: function(collection = [], callback = () => {}, result) {
       
       
       if (!(collection instanceof Array))
         collection = Object.values(collection)
         
-        if (!acc) {
-				acc = collection[0]
+        if (!result) {
+				result = collection[0]
 				collection = collection.slice(1)
 			}
 			
-			for (let i = 0; i < collection.length; i++) {
-				acc = callback(acc, collection[i], collection)
-			}
-			return acc;
-      
-      /*for (let i = 0; i < collection.length; i++){
-        result = result + callback(collection[i], result);
+			for (let i = 0; i < collection.length; i++){
+        result = callback(result, collection[i], collection);
       }
-      return result;*/
+      return result;
 
     },
 
