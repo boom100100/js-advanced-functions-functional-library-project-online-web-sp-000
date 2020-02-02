@@ -174,7 +174,7 @@ const fi = (function() {
     
       let result = [];
       for (let key in object){
-        if (object[key] === "function")
+        if (typeof object[key] === "function")
           result.push(key);
       }
       
