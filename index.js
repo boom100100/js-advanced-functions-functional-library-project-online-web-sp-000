@@ -160,8 +160,11 @@ const fi = (function() {
     },
 
     functions: function(object) {
-      console.log(object);
-      return this.values(object);
+      let result = [];
+      for (let key of object)
+        result.push(key)
+      
+      return result;
     },
 
 
