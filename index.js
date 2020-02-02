@@ -109,9 +109,55 @@ const fi = (function() {
       return newArr;
     },
     
-    uniq: function(){},
-    keys: function(){},
-    values: function(){},
+    uniqSorted: function(collection, iteratee) {
+      const sorted = [collection[0]]
+      for (let idx = 1; idx < collection.length; idx++) {
+        if (sorted[idx-1] !== collection[idx])
+          sorted.push(collection[idx])
+      }
+      return sorted
+    },
+
+    uniq: function(collection, sorted=false, iteratee=false) {
+      if (sorted) {
+        return fi.uniqSorted(collection, iteratee);
+      } else if (!iteratee) {
+        return Array.from(new Set(collection));
+      } else {
+        const modifiedVals = new Set();
+        const uniqVals = new Set();
+        for (let val of collection) {
+          const moddedVal = iteratee(val);
+          if (!modifiedVals.has(moddedVal)) {
+            modifiedVals.add(moddedVal);
+            uniqVals.add(val);
+          }
+        }
+        return Array.from(uniqVals);
+      }
+    },
+
+    keys: function(obj) {
+      // Using for loop
+      const keys = []
+      for (let key in obj){
+        keys.push(key)
+      }
+      return keys
+    },
+
+    values: function(obj) {
+      // Using for loop
+      const values = []
+      for (let key in obj){
+        values.push(obj[key])
+      }
+      return values
+
+      // Using the custom 'map' method from above
+      // return this.map(obj, (value) => value)
+
+    },
 
     functions: function() {
 
