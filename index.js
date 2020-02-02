@@ -45,7 +45,9 @@ const fi = (function() {
 
     },
     
-    find: function(){},
+    find: function(collection, callback){
+      
+    },
     filter: function(){},
     size: function(){},
     first: function(){},
