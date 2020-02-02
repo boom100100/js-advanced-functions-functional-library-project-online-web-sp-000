@@ -5,8 +5,9 @@ const fi = (function() {
     },
 
     each: function(collection, callback) {
-      for (let i = 0; i < collection.length; i++){
-        callback(collection);
+      let copy = collection;
+      for (let i = 0; i < copy.length; i++){
+        callback(copy);
       }
       return collection;
     },
